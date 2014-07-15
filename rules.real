@@ -1,3 +1,4 @@
+#							-*-makefile-*-
 SHELL  := bash -e
 override DEB_HOST_ARCH     := $(shell dpkg-architecture -a'$(ARCH)' -f -qDEB_HOST_ARCH)
 override DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -a'$(ARCH)' -f -qDEB_HOST_GNU_TYPE)
@@ -8,9 +9,11 @@ export DEB_HOST_ARCH
 
 include debian/rules.defs
 
-binary-indep: install-doc
-binary-indep: install-source
-binary-indep: install-tools
+# Disable binary-indep build parts
+#binary-indep: install-doc
+#binary-indep: install-source
+#binary-indep: install-tools
+binary-indep:
 
 install-base:
 	dh_bugfiles

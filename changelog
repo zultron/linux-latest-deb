@@ -1,6 +1,8 @@
 linux-latest (59) unstable; urgency=medium
 
   * Initial package for i-pipe-based real-time kernels, v. 3.8.13
+  * Disable source/doc/tools package builds
+    - not built by ipipe kernel package
 
  -- John Morris <john@zultron.com>  Mon, 14 Jul 2014 14:49:35 -0500
 

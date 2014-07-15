@@ -39,14 +39,15 @@ class Gencontrol(Base):
             [u'linux-support-%s' % self.abiname]
         )
 
-        latest_source = self.templates["control.source.latest"]
-        packages.extend(self.process_packages(latest_source, vars))
+        # Don't build these packages:  not built in linux-ipipe package
+        # latest_source = self.templates["control.source.latest"]
+        # packages.extend(self.process_packages(latest_source, vars))
 
-        latest_doc = self.templates["control.doc.latest"]
-        packages.extend(self.process_packages(latest_doc, vars))
+        # latest_doc = self.templates["control.doc.latest"]
+        # packages.extend(self.process_packages(latest_doc, vars))
 
-        latest_tools = self.templates["control.tools.latest"]
-        packages.extend(self.process_packages(latest_tools, vars))
+        # latest_tools = self.templates["control.tools.latest"]
+        # packages.extend(self.process_packages(latest_tools, vars))
 
     def do_flavour_packages(self, packages, makefile, arch, featureset, flavour, vars, makeflags, extra):
         if self.version.linux_modifier is None:
