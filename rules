@@ -48,6 +48,7 @@ endif
 debian/control-real: $(GENCONTROL) $(CONTROL_FILES)
 	$(GENCONTROL) /usr/src/linux-support-$(KERNELVERSION)
 	md5sum $^ > debian/control.md5sum
+ifndef NOFAIL
 	@echo
 	@echo This target is made to fail intentionally, to make sure
 	@echo that it is NEVER run during the automated build. Please
@@ -55,6 +56,7 @@ debian/control-real: $(GENCONTROL) $(CONTROL_FILES)
 	@echo been generated SUCCESSFULLY.
 	@echo
 	exit 1
+endif
 
 ifdef DEBIAN_KERNEL_BUILD_ANY
 binary-arch: binary-arch-all
