@@ -1,2 +1,7 @@
 # Emacs cruft
 *~
+
+# OSC
+/.osc/
+/linux-latest_*.tar.?z
+/linux-latest_*.dsc
