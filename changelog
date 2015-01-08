@@ -1,3 +1,9 @@
+linux-latest (60) unstable; urgency=medium
+
+  * Updates for OBS
+
+ -- John Morris <john@zultron.com>  Thu, 08 Jan 2015 15:44:28 -0600
+
 linux-latest (59) unstable; urgency=medium
 
   * Initial package for i-pipe-based real-time kernels, v. 3.8.13
